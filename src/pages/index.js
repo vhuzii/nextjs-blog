@@ -6,10 +6,10 @@ import Layout from 'components/Layout';
 import Header from 'components/Header';
 import Section from 'components/Section';
 import Container from 'components/Container';
-import PostCard from 'components/PostCard';
 import Pagination from 'components/Pagination';
 
 import styles from 'styles/pages/Home.module.scss';
+import PostsList from 'components/PostsList';
 
 export default function Home({ posts, pagination }) {
   const { metadata = {} } = useSite();
@@ -36,15 +36,7 @@ export default function Home({ posts, pagination }) {
       <Section>
         <Container>
           <h2 className="sr-only">Posts</h2>
-          <ul className={styles.posts}>
-            {posts.map((post) => {
-              return (
-                <li key={post.slug}>
-                  <PostCard post={post} />
-                </li>
-              );
-            })}
-          </ul>
+          <PostsList posts={posts} />
           {pagination && (
             <Pagination
               addCanonical={false}

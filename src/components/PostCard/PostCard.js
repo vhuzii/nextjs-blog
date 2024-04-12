@@ -6,9 +6,10 @@ import Metadata from 'components/Metadata';
 
 import { FaMapPin } from 'react-icons/fa';
 import styles from './PostCard.module.scss';
+import FeaturedImage from 'components/FeaturedImage';
 
 const PostCard = ({ post, options = {} }) => {
-  const { title, excerpt, slug, date, author, categories, isSticky = false } = post;
+  const { title, excerpt, slug, date, author, categories, featuredImage, isSticky = false } = post;
   const { excludeMetadata = [] } = options;
 
   const metadata = {};
@@ -35,6 +36,13 @@ const PostCard = ({ post, options = {} }) => {
     <div className={postCardStyle}>
       {isSticky && <FaMapPin aria-label="Sticky Post" />}
       <Link href={postPathBySlug(slug)}>
+        {featuredImage && (
+          <FeaturedImage
+            {...featuredImage}
+            src={featuredImage.sourceUrl}
+            dangerouslySetInnerHTML={featuredImage.caption}
+          />
+        )}
         <h3
           className={styles.postCardTitle}
           dangerouslySetInnerHTML={{
