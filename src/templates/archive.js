@@ -9,7 +9,7 @@ import Header from 'components/Header';
 import Section from 'components/Section';
 import Container from 'components/Container';
 import SectionTitle from 'components/SectionTitle';
-import PostCard from 'components/PostCard';
+import PostsList from 'components/PostsList';
 import Pagination from 'components/Pagination/Pagination';
 
 import styles from 'styles/templates/Archive.module.scss';
@@ -60,15 +60,7 @@ export default function TemplateArchive({
           <SectionTitle>Posts</SectionTitle>
           {Array.isArray(posts) && (
             <>
-              <ul className={styles.posts}>
-                {posts.map((post) => {
-                  return (
-                    <li key={post.slug}>
-                      <PostCard post={post} options={postOptions} />
-                    </li>
-                  );
-                })}
-              </ul>
+              <PostsList posts={posts} options={postOptions} />
               {pagination && (
                 <Pagination
                   currentPage={pagination?.currentPage}
