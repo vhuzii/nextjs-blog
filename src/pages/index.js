@@ -36,7 +36,7 @@ export default function Home({ posts, pagination }) {
       <Section>
         <Container>
           <h2 className="sr-only">Posts</h2>
-          <ul className={styles.posts}>
+          <ul className={'grid lg:grid-cols-3 ' + styles.posts}>
             {posts.map((post) => {
               return (
                 <li key={post.slug}>

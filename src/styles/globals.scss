@@ -1,10 +1,10 @@
 @import "styles/settings/__settings";
 @import "style.css";
 
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-@import 'tailwindcss/tailwind.css';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "tailwindcss/tailwind.css";
 
 * {
   box-sizing: border-box;
@@ -60,4 +60,12 @@ figcaption {
   left: -9999px;
   width: 0;
   height: 0;
+}
+
+figure img {
+  padding: 0;
+}
+
+figcaption {
+  display: none;
 }

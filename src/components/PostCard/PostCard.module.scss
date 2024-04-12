@@ -2,10 +2,16 @@
 
 .postCard {
   position: relative;
+  margin-top: 1.2em;
   padding: 1.2em;
   color: inherit;
   text-align: left;
   text-decoration: none;
+  width: 450px;
+  height: 600px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: 1px solid $color-gray-100;
 
   & > a {
     display: block;
