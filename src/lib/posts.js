@@ -299,8 +299,6 @@ export function mapPostData(post = {}) {
     data.featuredImage = data.featuredImage.node;
   }
 
-  console.log(data.featuredImage);
-
   return data;
 }
 
