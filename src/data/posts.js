@@ -25,7 +25,7 @@ export const POST_FIELDS = gql`
         caption
         sourceUrl
         srcSet
-        sizes
+        sizes(size: MEDIUM_LARGE)
         id
       }
     }
@@ -98,7 +98,7 @@ export const QUERY_ALL_POSTS = gql`
               caption
               sourceUrl
               srcSet
-              sizes
+              sizes(size: MEDIUM_LARGE)
               id
             }
           }
@@ -144,7 +144,7 @@ export const QUERY_POST_BY_SLUG = gql`
           caption
           sourceUrl
           srcSet
-          sizes
+          sizes(size: MEDIUM_LARGE)
           id
         }
       }
@@ -222,7 +222,7 @@ export const QUERY_POSTS_BY_CATEGORY_ID = gql`
               altText
               caption
               id
-              sizes
+              sizes(size: MEDIUM_LARGE)
               sourceUrl
               srcSet
             }
@@ -274,7 +274,7 @@ export const QUERY_POSTS_BY_AUTHOR_SLUG = gql`
               altText
               caption
               id
-              sizes
+              sizes(size: MEDIUM_LARGE)
               sourceUrl
               srcSet
             }

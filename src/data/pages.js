@@ -72,7 +72,7 @@ export const QUERY_ALL_PAGES = gql`
               altText
               caption
               id
-              sizes
+              sizes(size: MEDIUM_LARGE)
               sourceUrl
               srcSet
             }
@@ -105,7 +105,7 @@ export const QUERY_PAGE_BY_URI = gql`
           altText
           caption
           id
-          sizes
+          sizes(size: MEDIUM_LARGE)
           sourceUrl
           srcSet
         }
