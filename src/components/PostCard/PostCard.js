@@ -8,6 +8,7 @@ import { FaMapPin } from 'react-icons/fa';
 import styles from './PostCard.module.scss';
 import FeaturedImage from 'components/FeaturedImage';
 import HTMLEllipsis from 'react-lines-ellipsis/lib/html';
+import { FaArrowRight } from 'react-icons/fa';
 
 const PostCard = ({ post, options = {} }) => {
   const { title, excerpt, slug, date, author, categories, featuredImage, isSticky = false } = post;
@@ -34,7 +35,7 @@ const PostCard = ({ post, options = {} }) => {
   }
 
   return (
-    <div className={postCardStyle}>
+    <div className={'relative ' + postCardStyle}>
       {isSticky && <FaMapPin aria-label="Sticky Post" />}
       <Link href={postPathBySlug(slug)}>
         {featuredImage && (
@@ -53,6 +54,12 @@ const PostCard = ({ post, options = {} }) => {
       </Link>
       <Metadata className={styles.postCardMetadata} {...metadata} />
       <HTMLEllipsis className={styles.postCardContent} maxLine="3" unsafeHTML={sanitizeExcerpt(excerpt)} />
+      <Link href={postPathBySlug(slug)}>
+        <span className="absolute bottom-0 right-5 flex items-center gap-1 text-lg">
+          <span>Read More</span>
+          <FaArrowRight />
+        </span>
+      </Link>
     </div>
   );
 };
