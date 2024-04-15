@@ -18,7 +18,6 @@ const DEFAULT_POST_OPTIONS = {};
 
 export default function TemplateArchive({
   title = 'Archive',
-  Title,
   posts,
   postOptions = DEFAULT_POST_OPTIONS,
   slug,
@@ -43,7 +42,6 @@ export default function TemplateArchive({
 
       <Header>
         <Container>
-          <h1>{Title || title}</h1>
           {metadata.description && (
             <p
               className={styles.archiveDescription}
