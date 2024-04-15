@@ -77,7 +77,7 @@ export default function Post({ post, socialImage, related }) {
         />
       </Header>
 
-      <Content>
+      <Content className="lg:mr-16 lg:ml-16 md:mr-8 md:ml-8">
         <Section>
           <Container>
             <div

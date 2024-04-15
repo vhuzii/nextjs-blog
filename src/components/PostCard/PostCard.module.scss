@@ -23,6 +23,12 @@
       }
     }
   }
+
+  @media (min-width: theme("screens.lg")) {
+    height: 750px;
+  }
+
+  height: 650px;
 }
 
 .postCardSticky {
