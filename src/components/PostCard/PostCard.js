@@ -7,6 +7,7 @@ import Metadata from 'components/Metadata';
 import { FaMapPin } from 'react-icons/fa';
 import styles from './PostCard.module.scss';
 import FeaturedImage from 'components/FeaturedImage';
+import HTMLEllipsis from 'react-lines-ellipsis/lib/html';
 
 const PostCard = ({ post, options = {} }) => {
   const { title, excerpt, slug, date, author, categories, featuredImage, isSticky = false } = post;
@@ -51,14 +52,7 @@ const PostCard = ({ post, options = {} }) => {
         />
       </Link>
       <Metadata className={styles.postCardMetadata} {...metadata} />
-      {excerpt && (
-        <div
-          className={styles.postCardContent}
-          dangerouslySetInnerHTML={{
-            __html: sanitizeExcerpt(excerpt),
-          }}
-        />
-      )}
+      <HTMLEllipsis className={styles.postCardContent} maxLine="3" unsafeHTML={sanitizeExcerpt(excerpt)} />
     </div>
   );
 };

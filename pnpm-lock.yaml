@@ -62,6 +62,9 @@ dependencies:
   react-icons:
     specifier: ^4.8.0
     version: 4.8.0(react@18.2.0)
+  react-lines-ellipsis:
+    specifier: ^0.15.4
+    version: 0.15.4(react-dom@18.2.0)(react@18.2.0)
   rss:
     specifier: ^1.2.2
     version: 1.2.2
@@ -2753,6 +2756,16 @@ packages:
 
   /react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
+
+  /react-lines-ellipsis@0.15.4(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-bIcoVRulN6RdBb9QByRPan7vDjxJv4jhII9eMs5ZkCK4QYEbPiY+8g+IM7/B0kb8UbRRRgR7KwpPWI9j8d2FYg==}
+    peerDependencies:
+      react: '*'
+      react-dom: '*'
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
 
   /react-side-effect@2.1.2(react@18.2.0):
     resolution: {integrity: sha512-PVjOcvVOyIILrYoyGEpDN3vmYNLdy1CajSFNt4TDsVQC5KpTijDvWVoR+/7Rz2xT978D8/ZtFceXxzsPwZEDvw==}
