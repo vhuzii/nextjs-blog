@@ -7,7 +7,7 @@
   color: inherit;
   text-align: left;
   text-decoration: none;
-  height: 700px;
+  height: 750px;
   overflow: hidden;
   text-overflow: ellipsis;
 
@@ -17,9 +17,9 @@
     text-decoration: none;
 
     &:hover {
-      h3 {
+      h3,
+      span {
         color: $color-primary;
-        text-decoration: underline;
       }
     }
   }
