@@ -55,7 +55,7 @@ const PostCard = ({ post, options = {} }) => {
       <Metadata className={styles.postCardMetadata} {...metadata} />
       <HTMLEllipsis className={styles.postCardContent} maxLine="3" unsafeHTML={sanitizeExcerpt(excerpt)} />
       <Link href={postPathBySlug(slug)}>
-        <span className="absolute bottom-0 right-5 flex items-center gap-1 text-lg">
+        <span className="absolute bottom-0 right-5 flex items-center gap-1 text-lg font-semibold">
           <span>Read More</span>
           <FaArrowRight />
         </span>
